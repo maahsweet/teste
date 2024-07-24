@@ -351,8 +351,12 @@ do
         Test = Options.Fish.Value
         spawn(function()
             while wait() and Test do
-                pcall(function()
                     if Player.PlayerGui.FishingGui.ContainerFrame.Visible then
+                        local Fish = require(ReplicatedStorage["_replicationFolder"].FishingClient)
+                        local No = Player.PlayerGui.FishingGui.ContainerFrame.ReelingFrame.SpinRingFrame.SpinSmallSegment
+                        local Yes = Player.PlayerGui.FishingGui.ContainerFrame.ReelingFrame.SpinReelLabel
+                        local Bad = Player.PlayerGui.FishingGui.ContainerFrame.ReelingFrame.SpinRingFrame.SpinLargeSegment
+                        local Click = Fish.Click
                         StartCasting(Fish, StartCasting)
                         if Fish.Snagged then
                             Fish.ReelSignal:Fire()
