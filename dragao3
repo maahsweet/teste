@@ -347,30 +347,16 @@ do
         CollectEgging = Options.Egg.Value
     end)
     local Toggle = Tabs.AutoFarm:AddToggle("Fish", {Title = "Auto Fish", Default = false})
-    Toggle:OnChanged(function()
-        Test = Options.Fish.Value
-        spawn(function()
-            while wait() and Test do
-                pcall(function()
-                    if Player.PlayerGui.FishingGui.ContainerFrame.Visible then
-                        local Fish = require(ReplicatedStorage["_replicationFolder"].FishingClient)
-                        local StartCasting = Fish.StartCasting
-                        local No = Player.PlayerGui.FishingGui.ContainerFrame.ReelingFrame.SpinRingFrame.SpinSmallSegment
-                        local Yes = Player.PlayerGui.FishingGui.ContainerFrame.ReelingFrame.SpinReelLabel
-                        local Bad = Player.PlayerGui.FishingGui.ContainerFrame.ReelingFrame.SpinRingFrame.SpinLargeSegment
-                        local Click = Fish.Click
-                        StartCasting(Fish, StartCasting)
-                        if Fish.Snagged then
-                            Fish.ReelSignal:Fire()
-                            if Yes.AbsoluteRotation >= Bad.AbsoluteRotation and No.AbsoluteRotation <= Bad.AbsoluteRotation then
-                                Click(Fish, Fish.Click)
-                            end
-                        end
-                    end
-                end)
-            end
-        end)
+Toggle:OnChanged(function()
+    Test = Options.Fish.Value
+    spawn(function()
+        while wait() and Test do
+            pcall(function()
+                -- Aqui poderiam estar outras condições de verificação, caso necessário
+            end)
+        end
     end)
+end)
     Tabs.Misc:AddButton({Title = "Equip Dragon",Description = "Equips Selected Dragon",Callback = function()
         for i,v in next, Player.Data.Dragons:GetDescendants() do
             if  v.ClassName == 'StringValue' and  v.Value == DragonW and v:FindFirstChild("Stats") then 
