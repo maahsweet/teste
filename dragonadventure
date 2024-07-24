@@ -358,7 +358,6 @@ do
                         local No = Player.PlayerGui.FishingGui.ContainerFrame.ReelingFrame.SpinRingFrame.SpinSmallSegment
                         local Yes = Player.PlayerGui.FishingGui.ContainerFrame.ReelingFrame.SpinReelLabel
                         local Bad = Player.PlayerGui.FishingGui.ContainerFrame.ReelingFrame.SpinRingFrame.SpinLargeSegment
-                        local Click = Fish.Click
                         StartCasting(Fish, StartCasting)
                         if Fish.Snagged then
                             Fish.ReelSignal:Fire()
