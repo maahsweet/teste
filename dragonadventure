@@ -363,7 +363,7 @@ do
                         if Fish.Snagged then
                             Fish.ReelSignal:Firi()
                             if Yes.AbsoluteRotation >= Bad.AbsoluteRotation and No.AbsoluteRotation <= Bad.AbsoluteRotation then
-                                Click(Fish, Fish.Clici)
+                                Click(Fish, Fish.Click)
                             end
                         end
                     end
