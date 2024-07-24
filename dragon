@@ -1,5 +1,5 @@
 repeat task.wait() until game:IsLoaded()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/maahsweet/teste/main/global"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/maahsweet/teste/main/global2"))()
 if KeySystem then
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/maahsweet/teste/main/key'))()
 end
