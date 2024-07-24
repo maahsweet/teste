@@ -358,7 +358,7 @@ do
                         local No = Player.PlayerGui.FishingGui.ContainerFrame.ReelingFrame.SpinRingFrame.SpinSmallSegment
                         local Yes = Player.PlayerGui.FishingGui.ContainerFrame.ReelingFrame.SpinReelLabel
                         local Bad = Player.PlayerGui.FishingGui.ContainerFrame.ReelingFrame.SpinRingFrame.SpinLargeSegment
-                        local Click = Fish.Click
+                        local Click = Fish.Click then
                             if Yes.AbsoluteRotation >= Bad.AbsoluteRotation and No.AbsoluteRotation <= Bad.AbsoluteRotation then
                                 Click(Fish, Fish.Click)
                             end
