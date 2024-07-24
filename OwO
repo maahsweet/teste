@@ -371,9 +371,6 @@ spawn(
 )
 
 end)
-
-local Toggle1 = Section1:CreateToggle("Auto Fish", Settings.AutoFish, function(State)
-end)
 local Toggle1 = Section2:CreateToggle("Ore Esp", Settings.Esp, function(State)
 Settings.Esp = State
 local function esp(v)
