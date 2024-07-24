@@ -371,6 +371,18 @@ spawn(
 )
 
 end)
+
+local Toggle1 = Section1:CreateToggle("Auto Fish", Settings.AutoFish, function(State)
+Settings.AutoFish = State
+spawn(
+    function()
+        while wait(3) and Settings.AutoFish do
+            wait()
+            Player.PlayerGui.Fish.Ado.catch:FireServer(Workspace.FishingSpawns.Fishing)
+        end
+    end
+)
+end)
 local Toggle1 = Section2:CreateToggle("Ore Esp", Settings.Esp, function(State)
 Settings.Esp = State
 local function esp(v)
