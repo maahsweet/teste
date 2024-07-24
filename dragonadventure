@@ -354,6 +354,7 @@ do
                 pcall(function()
                     if Player.PlayerGui.FishingGui.ContainerFrame.Visible then
                         local Fish = require(ReplicatedStorage["_replicationFolder"].FishingClient)
+                        local StartCasting = Fish.StartCasting
                         local No = Player.PlayerGui.FishingGui.ContainerFrame.ReelingFrame.SpinRingFrame.SpinSmallSegment
                         local Yes = Player.PlayerGui.FishingGui.ContainerFrame.ReelingFrame.SpinReelLabel
                         local Bad = Player.PlayerGui.FishingGui.ContainerFrame.ReelingFrame.SpinRingFrame.SpinLargeSegment
@@ -363,7 +364,7 @@ do
                             Fish.ReelSignal:Fire()
                             if Yes.AbsoluteRotation >= Bad.AbsoluteRotation and No.AbsoluteRotation <= Bad.AbsoluteRotation then
                                 Click(Fish, Fish.Click)
-                      while wait(10)
+                                while wait(10)
                             end
                         end
                     end
