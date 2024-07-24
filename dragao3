@@ -350,7 +350,7 @@ do
     Toggle:OnChanged(function()
         Test = Options.Fish.Value
         spawn(function()
-            while wait() and Test do
+            while wait(5) and Test do
                 pcall(function()
                     if Player.PlayerGui.FishingGui.ContainerFrame.Visible then
                         local Fish = require(ReplicatedStorage["_replicationFolder"].FishingClient)
